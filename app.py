@@ -10,7 +10,7 @@ def main():
     st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.title("BMI Predictor")
-    st.subheader("Exploration of Prediction")
+    st.subheader("Exploration of Data")
 
    
     
@@ -45,15 +45,16 @@ def main():
     if st.checkbox("Show Scatter BMI vs Weight"):
         sns.lmplot(x='Weight',y='BMI',data=data)
         st.pyplot()
-        st.markdown("From observation we can see than an Increase in Weight affects the BMI")
+        st.markdown("From observation we can see than an Increase in Weight increases the BMI of an Individual")
     if st.checkbox("Show Scatter BMI vs Age"):
         sns.lmplot(x='Age',y='BMI',data=data)
         st.pyplot()
-        st.markdown("From observation we can see that Age doesnt have any effect on a persons BMI")
+        st.markdown("From the above plot we can see that a persons age  does not have any effect his/her BMI")
     if st.checkbox("Show Scatter BMI vs Height"):
         sns.lmplot(x='Height',y='BMI',data=data)
         st.pyplot()
-        st.markdown("From observation we can see that Height tends to have an effect on a persons BMI")
+        st.markdown("From the above plot we can see that Height tends to have a slightly negative effect on a persons BMI")
+        st.markdown("As Height Increase BMI reduces")
            
       
     if st.checkbox("Show Gender Count "):
@@ -100,11 +101,11 @@ def main():
     st.write("Your BMI is :",BMIPrediction)
     if BMIPrediction < 18.5:
         st.warning("You are underweight")
-    elif BMIPrediction >18.5 and BMIPrediction <= 25.0:
+    elif BMIPrediction >=18.5 and BMIPrediction <= 25.0:
         st.success("You are of Normal BMI")
-    elif BMIPrediction >25.0 and BMIPrediction <= 30.0:
+    elif BMIPrediction >25.0 and BMIPrediction < 30.0:
         st.success("You are Over Weight")    
-    elif BMIPrediction > 30:
+    elif BMIPrediction >= 30:
         st.warning("You are Obese")
     else:
         st.info("Enter The Right Details")
