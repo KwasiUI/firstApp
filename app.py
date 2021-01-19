@@ -27,7 +27,7 @@ def main():
 	st.sidebar.header("BMI Application")
 	tasksel=st.sidebar.selectbox("Select Task",task)
 	if tasksel=='Home':
-		st.image('bmi.jpg',width=700)
+		st.image('bmi.jpg',width=500)
 
 
 
