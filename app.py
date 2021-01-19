@@ -27,7 +27,9 @@ def main():
 	st.sidebar.header("BMI Application")
 	tasksel=st.sidebar.selectbox("Select Task",task)
 	if tasksel=='Home':
-		st.image('bmi.jpg',width=500)
+		st.info('Body Mass Index (BMI) is a person’s weight in kilograms divided by the square of height in meters. A high BMI can be an indicator of high body fatness. BMI can be used to screen for weight categories that may lead to health problems but it is not diagnostic of the body fatness or health of an individual.')
+		st.info('f your BMI is between 18.5-24.9: Your BMI is considered normal. This healthy weight helps reduce your risk of serious health conditions and means you are close to your fitness goals. If your BMI is between 25-29.9: Your BMI is considered overweight. Being overweight may increase your risk of cardiovascular disease')
+		
 
 
 
