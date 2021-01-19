@@ -31,7 +31,7 @@ def main():
 
 
 
-	if tasksel=='Data Anaylysis':
+	if tasksel=='Data Analysis':
 		if st.button("Preview BMI Data"):
 			st.write(data)
  
